@@ -27,3 +27,4 @@ SELECT * FROM second_task;
 CREATE VIEW third_task AS
 SELECT id, from_user_id, to_user_id, body, created_at, ((created_at-LAG(created_at) OVER())/100) AS 'different' FROM messages;
 SELECT * FROM third_task;
+
